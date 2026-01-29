@@ -8,6 +8,11 @@
   font-family: 'Poppins', sans-serif;
 }
  
+html,
+body {
+  overflow-x: hidden; /* FIX horizontal white space */
+}
+ 
 body {
   color: #333;
   background: #f9f9f9;
@@ -43,6 +48,8 @@ header {
   list-style: none;
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;           /* mobile safety */
+  justify-content: center;
 }
  
 .nav-links a {
@@ -67,6 +74,7 @@ header {
   background: linear-gradient(120deg, #00bcd4, #2196f3);
   color: white;
   text-align: center;
+  padding: 0 10px;
 }
  
 .home-content h2 {
@@ -115,10 +123,10 @@ header {
 }
  
 /* =====================
-   SECTIONS (COMMON)
+   SECTIONS
 ===================== */
 section {
-  padding: 60px 10%;
+  padding: 60px 8%;
 }
  
 .about,
@@ -230,24 +238,25 @@ footer {
 }
  
 /* =====================
-   RESPONSIVE (MOBILE)
+   MOBILE RESPONSIVE
 ===================== */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    gap: 10px;
+ 
+  section {
+    padding: 40px 5%;
   }
  
   .home-content h2 {
     font-size: 28px;
   }
  
-  section {
-    padding: 40px 6%;
-  }
- 
   .btn-secondary {
     display: block;
     margin: 10px auto 0;
   }
+ 
+  .project-grid {
+    grid-template-columns: 1fr; /* FIX project cutoff */
+  }
 }
+ 
