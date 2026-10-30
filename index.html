@@ -3,15 +3,17 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-<meta name="theme-color" content="#05070b" />
-<meta name="description" content="Software Engineer and Backend Developer specializing in Java, Spring Boot, REST APIs, and production GenAI systems." />
-<title>Darshan Jawalkar — Software Engineer & Backend Developer</title>
+<meta name="theme-color" content="#030508" />
+<title>Darshan Jawalkar — Software Engineer & Backend Specialist</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+<!-- AMBIENT LIGHTING -->
+<div class="ambient-glow"></div>
 
 <!-- NAV -->
 <nav>
@@ -20,214 +22,261 @@
     <span></span><span></span><span></span>
   </button>
   <div class="nav-links" id="navLinks">
-    <a href="#home" onclick="closeNav()"><span>01.</span> Home</a>
-    <a href="#about" onclick="closeNav()"><span>02.</span> About</a>
-    <a href="#experience" onclick="closeNav()"><span>03.</span> Experience</a>
-    <a href="#projects" onclick="closeNav()"><span>04.</span> Projects</a>
-    <a href="#skills" onclick="closeNav()"><span>05.</span> Skills</a>
-    <a href="#ai" onclick="closeNav()"><span>06.</span> AI Systems</a>
-    <a href="#contact" onclick="closeNav()"><span>07.</span> Contact</a>
+    <a href="#home" onclick="closeNav()">01. Overview</a>
+    <a href="#about" onclick="closeNav()">02. Profile</a>
+    <a href="#experience" onclick="closeNav()">03. Experience</a>
+    <a href="#projects" onclick="closeNav()">04. Systems</a>
+    <a href="#skills" onclick="closeNav()">05. Arsenal</a>
+    <a href="#contact" onclick="closeNav()">06. Connect</a>
   </div>
-  <a href="mailto:darshanj590@gmail.com" class="nav-cta desktop-only">Get in Touch →</a>
+  <a href="mailto:darshanj590@gmail.com" class="nav-cta desktop-only">Initialize Contact →</a>
 </nav>
 
 <!-- HERO -->
 <section id="home" class="hero">
-  <div class="hero-glow"></div>
-  <div class="hero-glow2"></div>
-
-  <div class="hero-inner">
-    <div class="hero-text">
-      <div class="hero-label">
-        <span class="pulse-dot"></span> Available for SDE / Backend Roles · July 2026
+  <div class="hero-container">
+    <div class="hero-text-col">
+      <div class="hero-status-badge">
+        <span class="status-dot"></span> SDE / Backend Specialist · Available July 2026
       </div>
-
-      <h1 class="hero-name">
-        Hi, I'm <span class="gradient-text">Darshan.</span>
+      
+      <h1 class="hero-heading">
+        Architecting <span class="gradient-text">High-Throughput</span> Backends & AI Systems.
       </h1>
 
-      <div class="hero-title">Software Engineer & Backend Specialist</div>
-
-      <p class="hero-role">
-        Engineered for scale. Building robust distributed backends, ultra-efficient microservices, and practical production-grade GenAI automation systems with <strong>Java</strong>, <strong>Spring Boot</strong>, and <strong>Python</strong>.
+      <p class="hero-subtext">
+        Software Engineer at <strong>Cognizant</strong>. Specialized in low-latency Java microservices, distributed data pipelines, and production-ready GenAI tool orchestration.
       </p>
 
-      <div class="hero-badges">
-        <span class="badge">Java 17</span>
-        <span class="badge">Spring Boot 3</span>
-        <span class="badge">REST APIs</span>
-        <span class="badge green">Python</span>
-        <span class="badge green">GenAI & LLMs</span>
-        <span class="badge">PostgreSQL & Redis</span>
+      <div class="hero-metrics-grid">
+        <div class="metric-box">
+          <span class="m-val" data-target="2">0</span>
+          <span class="m-lbl">Prod GenAI Tools</span>
+        </div>
+        <div class="metric-box">
+          <span class="m-val" data-target="40" data-suffix="%">0%</span>
+          <span class="m-lbl">Latency Reduction</span>
+        </div>
+        <div class="metric-box">
+          <span class="m-val" data-target="100" data-suffix="+">0+</span>
+          <span class="m-lbl">Workflows Built</span>
+        </div>
       </div>
 
-      <div class="hero-ctas">
-        <a href="#projects" class="btn-primary">Explore Projects <span>↓</span></a>
-        <a href="darshan_amazon_sde1_resume.pdf" download class="btn-secondary">Download Resume</a>
-        <a href="https://github.com/JSREENAMDARSHAN" target="_blank" class="btn-secondary github-btn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          GitHub
-        </a>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-glow">Explore Systems <span>↓</span></a>
+        <a href="darshan_amazon_sde1_resume.pdf" download class="btn-glass">Download Resume</a>
       </div>
     </div>
 
-    <div class="hero-photo-wrap">
-      <div class="hero-photo-ring">
-        <img src="profile.png" alt="Darshan Jawalkar" class="hero-photo" />
-      </div>
-      <div class="photo-badge">
-        <span class="photo-badge-dot"></span> Cognizant · Top Performer
+    <!-- TERMINAL CARD -->
+    <div class="hero-terminal-col">
+      <div class="terminal-card">
+        <div class="terminal-header">
+          <span class="t-dot red"></span>
+          <span class="t-dot yellow"></span>
+          <span class="t-dot green"></span>
+          <span class="t-title">darshan@core-backend:~</span>
+        </div>
+        <div class="terminal-body">
+          <p><span class="t-prompt">$</span> java -version</p>
+          <p class="t-output">openjdk version "17.0.9" 2023-10-17 LTS</p>
+          <p><span class="t-prompt">$</span> mvn clean spring-boot:run</p>
+          <p class="t-output">Started Application in 2.144 s [PostgreSQL &amp; Redis Ready]</p>
+          <p><span class="t-prompt">$</span> python ai_agent.py --deploy</p>
+          <p class="t-success">✔ 2 Production GenAI Pipelines Active (40% Eff. Gain)</p>
+          <p class="t-cursor-line"><span class="t-prompt">$</span> <span class="cursor-blink">_</span></p>
+        </div>
       </div>
     </div>
-  </div>
-
-  <div class="hero-scroll">
-    <span>Scroll Down</span>
-    <div class="scroll-line"></div>
   </div>
 </section>
 
-<!-- STATS BAR -->
-<div class="stats-bar">
-  <div class="stat-item">
-    <div class="stat-num" data-target="2" data-suffix="">2</div>
-    <div class="stat-label">Production GenAI Tools</div>
+<!-- ABOUT BENTO -->
+<section id="about" class="section">
+  <div class="sec-header">
+    <span class="sec-num">02 // PROFILE</span>
+    <h2 class="sec-title">Engineering Core & Philosophy</h2>
   </div>
-  <div class="stat-item">
-    <div class="stat-num" data-target="40" data-suffix="%">40%</div>
-    <div class="stat-label">Latency & Effort Reduction</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-num" data-target="100" data-suffix="+">100+</div>
-    <div class="stat-label">Enterprise Workflows</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-num" data-target="9" data-suffix=".14">9.14</div>
-    <div class="stat-label">B.Tech CSE CGPA</div>
-  </div>
-</div>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="section-label">02 — About Me</div>
-  <h2 class="section-title">Engineering Systems<br>That Scale & Perform</h2>
-  <div class="about-grid">
-    <div class="about-text reveal">
-      <p>I'm <strong>Darshan Jawalkar</strong>, a Software Engineer and Backend Developer based in Chennai, India. My core expertise lies in designing resilient Java backends, high-performance REST APIs, and integrating production-ready GenAI pipelines.</p>
-      <p>Recognized as a <span class="highlight">Top Performer at Cognizant</span>, I developed a modular Java service framework from scratch using ThreadLocal parallel execution handling <span class="highlight">100+ workflows</span> with a 40% efficiency boost. I also built <span class="highlight">2 production GenAI tools</span> that cut manual testing and scenario generation overhead by half.</p>
+  <div class="bento-grid">
+    <div class="bento-card span-2">
+      <div class="bento-tag">BACKGROUND</div>
+      <h3>Driven by Scale & Precision</h3>
+      <p>I build resilient backend architectures that handle heavy loads without breaking a sweat. Recognized as a <strong>Top Performer at Cognizant</strong>, my work bridges rigorous computer science principles (OOP, SOLID, Clean Architecture) with modern AI automation.</p>
+      <div class="mini-tags">
+        <span>Java 17</span><span>Spring Boot 3</span><span>Distributed Systems</span><span>Python</span>
+      </div>
     </div>
-    <div class="about-details reveal">
-      <div class="detail-card">
-        <h4>Current Status</h4>
-        <p>Software Engineer Opportunities</p>
-        <p class="sub">Actively interviewing · July 2026</p>
-      </div>
-      <div class="detail-card">
-        <h4>Education</h4>
-        <p>B.Tech in Computer Science & Engineering</p>
-        <p class="sub">CGPA: 9.14 / 10.0 · 2020–2024</p>
-      </div>
+
+    <div class="bento-card">
+      <div class="bento-tag">EDUCATION</div>
+      <h3>B.Tech in CSE</h3>
+      <div class="stat-highlight">9.14 CGPA</div>
+      <p>Graduated 2024 with deep academic grounding in data structures, algorithms, and database management systems.</p>
+    </div>
+
+    <div class="bento-card">
+      <div class="bento-tag">LOCATION</div>
+      <h3>Based in Chennai</h3>
+      <div class="stat-highlight text-green">Ready to Relocate</div>
+      <p>Actively open to full-time SDE roles in Bengaluru, Hyderabad, Chennai, or Remote positions.</p>
     </div>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience">
-  <div class="section-label">03 — Work Experience</div>
-  <h2 class="section-title">Professional<br>Experience</h2>
-  <div class="exp-grid">
-    <div class="exp-card reveal">
-      <div class="exp-header">
-        <div>
-          <div class="exp-company">Cognizant Technology Solutions</div>
-          <div class="exp-title">Software Engineer</div>
-        </div>
-        <div class="exp-date">Oct 2025 — Jul 2026</div>
+<section id="experience" class="section">
+  <div class="sec-header">
+    <span class="sec-num">03 // TRACK RECORD</span>
+    <h2 class="sec-title">Professional Impact</h2>
+  </div>
+
+  <div class="exp-timeline">
+    <div class="exp-item">
+      <div class="exp-badge-date">Oct 2025 — Present</div>
+      <div class="exp-content-box">
+        <h3>Software Engineer</h3>
+        <span class="exp-org">Cognizant Technology Solutions · Chennai</span>
+        <ul class="exp-list">
+          <li><strong>Built 2 Production GenAI Tools</strong> using Python & LLM APIs, automating complex test case scenarios and cutting manual creation effort by 40–50%.</li>
+          <li><strong>Engineered a Modular Java Service Framework</strong> from scratch featuring ThreadLocal parallel execution context isolation, driving 100+ production workflows with ~40% efficiency gains.</li>
+          <li><strong>Optimized Data Pipelines & Caching</strong> across PostgreSQL and Couchbase databases, eliminating sync discrepancies by ~30%.</li>
+          <li>🏆 Awarded <strong>Top Performer Recognition</strong> for architectural contributions and high-throughput delivery.</li>
+        </ul>
       </div>
-      <div class="exp-bullets-simple">
-        <li><strong>Built 2 production GenAI tools</strong> using Python and LLM APIs. Created an automated test scenario generator that reduced manual test creation effort by 40–50%.</li>
-        <li><strong>Designed a modular Java service framework from scratch</strong> featuring parallel execution utilizing ThreadLocal context isolation, delivering 100+ enterprise workflows with ~40% efficiency improvement.</li>
-        <li class="recognition">🏆 <strong>Top Performer Recognition</strong> — Awarded for exceptional contributions to backend frameworks and GenAI tool deployment.</li>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-badge-date">Oct 2024 — Oct 2025</div>
+      <div class="exp-content-box">
+        <h3>Programmer Analyst Trainee</h3>
+        <span class="exp-org">Cognizant Technology Solutions · Chennai</span>
+        <ul class="exp-list">
+          <li>Completed rigorous enterprise training in advanced Java, data structures, automated testing frameworks (JUnit, Mockito, TestNG), and secure REST API design.</li>
+          <li>Contributed to enterprise automation suites and CI/CD pipelines, reducing regression failure rates.</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
-  <div class="section-label">04 — Featured Projects</div>
-  <h2 class="section-title">Systems &<br>Applications</h2>
-  <div class="projects-grid">
-    <div class="project-card reveal">
-      <div class="project-header">
-        <div class="project-icon">📊</div>
-        <div class="project-links">
-          <a href="https://github.com/JSREENAMDARSHAN/react-product-dashboard" target="_blank" class="project-link">GitHub ↗</a>
-          <a href="https://leafy-klepon-fcb0ed.netlify.app" target="_blank" class="project-link primary-link">Live App ↗</a>
+<section id="projects" class="section">
+  <div class="sec-header">
+    <span class="sec-num">04 // SYSTEMS</span>
+    <h2 class="sec-title">Featured Production & Dev Projects</h2>
+  </div>
+
+  <div class="projects-bento">
+    <div class="project-box">
+      <div class="proj-top">
+        <span class="proj-icon">📊</span>
+        <div class="proj-links">
+          <a href="https://github.com/JSREENAMDARSHAN/react-product-dashboard" target="_blank">GitHub ↗</a>
+          <a href="https://leafy-klepon-fcb0ed.netlify.app" target="_blank" class="accent-link">Live App ↗</a>
         </div>
       </div>
-      <div class="project-title">React Product Dashboard</div>
-      <div class="project-desc">High-performance responsive dashboard consuming RESTful backend services with real-time state filtering, modular component architecture, and automated CI/CD deployment via GitHub Actions.</div>
-      <div class="project-tech">
-        <span class="badge">React.js</span>
-        <span class="badge">REST APIs</span>
+      <h3>React Product Dashboard</h3>
+      <p>High-performance reactive frontend consuming REST APIs with real-time filtering, memoized state handling, and automated GitHub Actions CI/CD pipeline deployment.</p>
+      <div class="proj-tech"><span>React.js</span><span>REST APIs</span><span>Netlify</span></div>
+    </div>
+
+    <div class="project-box">
+      <div class="proj-top">
+        <span class="proj-icon">⚡</span>
+        <div class="proj-links">
+          <a href="https://github.com/JSREENAMDARSHAN" target="_blank">GitHub ↗</a>
+        </div>
       </div>
+      <h3>Task Manager Microservice API</h3>
+      <p>Robust Spring Boot backend featuring JWT authentication, role-based access control, database indexing, and comprehensive JUnit/Mockito unit testing coverage.</p>
+      <div class="proj-tech"><span>Spring Boot</span><span>PostgreSQL</span><span>Spring Security</span></div>
     </div>
   </div>
 </section>
 
-<!-- SKILLS -->
-<section id="skills">
-  <div class="section-label">05 — Technical Skills</div>
-  <h2 class="section-title">Technical<br>Arsenal</h2>
-  <div class="skills-grid">
-    <div class="skill-card reveal">
-      <div class="skill-card-header">
-        <div class="skill-icon icon-blue">☕</div>
-        <h3>Backend & Frameworks</h3>
-      </div>
-      <div class="skill-tags">
-        <span class="skill-tag">Java 17</span>
-        <span class="skill-tag">Spring Boot 3</span>
-        <span class="skill-tag">RESTful APIs</span>
-      </div>
+<!-- SKILLS MATRIX -->
+<section id="skills" class="section">
+  <div class="sec-header">
+    <span class="sec-num">05 // ARSENAL</span>
+    <h2 class="sec-title">Technical Matrix</h2>
+  </div>
+
+  <div class="matrix-grid">
+    <div class="matrix-card">
+      <div class="m-icon">☕</div>
+      <h4>Backend Engineering</h4>
+      <p>Java 17, Spring Boot 3, RESTful APIs, Microservices, Spring Data JPA, Hibernate, ThreadLocal concurrency.</p>
+    </div>
+    <div class="matrix-card">
+      <div class="m-icon">🗄️</div>
+      <h4>Data & Caching</h4>
+      <p>PostgreSQL, Couchbase, MySQL, Redis Caching, Query Indexing & performance tuning.</p>
+    </div>
+    <div class="matrix-card">
+      <div class="m-icon">🤖</div>
+      <h4>AI & Automation</h4>
+      <p>Python, LLM API orchestration, Prompt Engineering, Document Intelligence pipelines.</p>
+    </div>
+    <div class="matrix-card">
+      <div class="m-icon">⚙️</div>
+      <h4>DevOps & Quality</h4>
+      <p>Azure DevOps CI/CD, Docker, Git/GitHub, Maven, Gradle, JUnit 5, Mockito, Selenium.</p>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
-  <div class="contact-inner">
-    <div class="section-label">07 — Contact</div>
-    <h2 class="section-title reveal">Let's Build<br>Something Great</h2>
-    <a href="mailto:darshanj590@gmail.com" class="contact-email reveal">darshanj590@gmail.com</a>
-    <div class="contact-links reveal">
-      <a href="https://linkedin.com/in/sreenamdarshanjawalkar-48021a283" target="_blank" class="contact-link">LinkedIn</a>
-      <a href="https://github.com/JSREENAMDARSHAN" target="_blank" class="contact-link">GitHub</a>
-      <a href="darshan_amazon_sde1_resume.pdf" download class="contact-link">Download Resume</a>
+<section id="contact" class="contact-section">
+  <div class="contact-box">
+    <span class="sec-num">06 // INITIATE DIALOGUE</span>
+    <h2>Ready to Build Exceptional Systems?</h2>
+    <p>I'm actively interviewing for Software Engineer and Backend positions starting July 2026. Let's discuss how I can add immediate value to your engineering team.</p>
+    <a href="mailto:darshanj590@gmail.com" class="big-email">darshanj590@gmail.com</a>
+    <div class="contact-row">
+      <a href="https://linkedin.com/in/sreenamdarshanjawalkar-48021a283" target="_blank" class="c-btn">LinkedIn Profile</a>
+      <a href="https://github.com/JSREENAMDARSHAN" target="_blank" class="c-btn">GitHub Repos</a>
+      <a href="darshan_amazon_sde1_resume.pdf" download class="c-btn primary">Download Resume</a>
     </div>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 <span>Darshan Jawalkar</span>. Software Engineer.</p>
+  <p>© 2026 Darshan Jawalkar. Built for the 1%.</p>
+  <p>Chennai, India</p>
 </footer>
 
 <script>
+  // Dynamic mouse spotlight
   document.addEventListener('mousemove', e => {
     document.body.style.setProperty('--mouse-x', e.clientX + 'px');
     document.body.style.setProperty('--mouse-y', e.clientY + 'px');
   });
 
+  // Mobile menu
   const toggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
   toggle.addEventListener('click', () => { navLinks.classList.toggle('open'); toggle.classList.toggle('active'); });
   function closeNav() { navLinks.classList.remove('open'); toggle.classList.remove('active'); }
 
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach((e) => { if(e.isIntersecting){ e.target.classList.add('visible'); } });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  // Stat counting animation
+  function animateCount(el) {
+    const target = parseFloat(el.dataset.target);
+    const suffix = el.dataset.suffix || '';
+    if(target===0){ el.textContent='0'+suffix; return; }
+    let start=null;
+    const step = ts => {
+      if(!start) start=ts;
+      const p = Math.min((ts-start)/1400, 1);
+      el.textContent = Math.floor(p * target) + suffix;
+      if(p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+  new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.querySelectorAll('.m-val').forEach(animateCount); } });
+  }, {threshold:0.4}).observe(document.querySelector('.hero-metrics-grid'));
 </script>
 </body>
 </html>
