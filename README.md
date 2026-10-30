@@ -1,96 +1,91 @@
-# Darshan Jawalkar — Software Engineer Portfolio
+# DARSHAN.FLIX
 
-A premium, modern portfolio website showcasing Software Engineering and Backend Development expertise. Built with vanilla HTML, CSS, and JavaScript for optimal performance.
+A cinematic, streaming-inspired portfolio for **Darshan Sreenam Jawalkar**: Software Engineer and Backend Specialist.
+Every section is an episode, every project is an Original, and the whole site plays like a series.
 
-## Features
+> A personal portfolio with a fictional streaming-platform look. It is not affiliated with Netflix or any other streaming service and uses none of their logos.
 
-- **Dark Modern Theme** — Premium design with sophisticated typography and subtle gradients
-- **Responsive Design** — Fully optimized for desktop, tablet, and mobile
-- **Smooth Animations** — Scroll reveal animations, smooth transitions, and micro-interactions
-- **Accessibility** — Semantic HTML, keyboard navigation, focus states, and reduced motion support
-- **SEO Optimized** — Proper metadata and Open Graph tags
-- **Performance** — Lightweight, no heavy dependencies, optimized animations
+## Run it locally
 
-## Sections
+Requires **Node.js 18+**.
 
-- **Home/Hero** — Compelling introduction with call-to-action buttons
-- **About** — Professional background and current focus
-- **Experience** — Detailed work experience with key achievements
-- **Projects** — Showcase of built projects with links to GitHub and live demos
-- **Skills** — Technical skills organized by category (Backend, Programming, Databases, Testing, DevOps, AI)
-- **Engineering with AI** — Dedicated section for GenAI and LLM API work
-- **Contact** — Email, social links, and resume download
-
-## Technical Stack
-
-- **HTML5** — Semantic markup
-- **CSS3** — Modern features, CSS Grid, Flexbox, animations
-- **JavaScript (Vanilla)** — No framework dependencies
-- **Font Families** — Syne (headings), DM Sans (body), DM Mono (code/labels)
-- **Design System** — CSS variables for easy customization
-
-## Customization
-
-### Colors
-Edit `:root` variables in `style.css`:
-```css
---bg: #0a0e1a;           /* Background */
---accent: #4f8cff;       /* Primary accent color */
---accent2: #00e5c3;      /* Secondary accent */
---text: #e8edf8;         /* Text color */
+```bash
+npm install
+npm run dev
 ```
 
-### Resume
-Replace the placeholder `Darshan_Jawalkar_SDE_Resume.pdf` with your actual resume PDF in the project root folder.
+Open the URL Vite prints (usually http://localhost:5173).
 
-### Profile Image
-The `profile.png` image is displayed in the hero section. Update with your professional headshot.
+Production build:
 
-## Building & Deployment
+```bash
+npm run build
+npm run preview
+```
 
-Since this is vanilla HTML/CSS/JS, deployment is straightforward:
+The static site is written to `dist/` and can be deployed as-is to Vercel, Netlify, GitHub Pages or any static host.
 
-1. **Local Testing**:
-   - Open `index.html` in a web browser
+## Updating the content
 
-2. **GitHub Pages**:
-   - Push to a GitHub repository
-   - Enable Pages in repository settings
-   - Site will be live at `https://yourusername.github.io/repo-name`
+**All content lives in one file: [`src/data/portfolio.ts`](src/data/portfolio.ts).** It was generated from the resume, and every component reads from it.
 
-3. **Netlify**:
-   - Connect your GitHub repo
-   - Deploy with one click
-   - Automatic rebuilds on push
+| To change… | Edit |
+| --- | --- |
+| Name, intro, email, LinkedIn, GitHub | `profile` |
+| A project, or a new one | `projects` (add an object; it appears in Originals, the overlay, the resume sheet and the counts) |
+| Achievements / certifications | `achievements`, `certifications` |
+| Skills and their "where it's used" notes | `skillCategories`, `skillEvidence` |
+| Seasons and episodes (My Journey) | `seasons` |
+| Career highlights row | `topPicks` |
+| ▶ Play Intro highlight reel | `introSlides` |
+| Profile order and mode-specific hero, highlights, and intro | `viewerProfiles` |
+| Opening studio card text | `profile.originalLabel` |
 
-## Navigation Structure
+**Resume:** `public/assets/darshan_amazon_sde1_resume.pdf`.
 
-- Home (`#home`) — Hero section
-- About (`#about`) — Background and focus
-- Experience (`#experience`) — Work history
-- Projects (`#projects`) — Portfolio projects
-- Skills (`#skills`) — Technical expertise
-- AI (`#ai`) — GenAI and LLM work
-- Contact (`#contact`) — Contact information
+**Photo:** `public/assets/profile.png`. The portfolio uses this image directly.
 
-## Browser Support
+**Project artwork:** the dashboard and task-manager showcase images live in `public/assets/` and are referenced by the project entries in `src/data/portfolio.ts`.
 
-- Chrome/Edge (latest)
-- Firefox (latest)
-- Safari (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
+## What's inside
 
-## Performance Notes
+```
+src/
+  data/portfolio.ts        ← single source of truth (from the resume)
+  App.tsx                  ← stages: opening → profile select → home; overlays
+  components/
+    OpeningSequence        ← black → studio card → DARSHAN → DARSHAN.FLIX → portrait → ▶ PLAY
+    ProfileSelector        ← "Who's watching?" (changes section order only)
+    Navbar                 ← hide-on-scroll nav, profile switcher, mobile menu
+    Hero                   ← billboard: parallax portrait, particles, light streaks, floating chips
+    PlayIntro              ← ▶ Play Intro: zoom into portrait → highlight reel (pause, ← →, tap zones)
+    ContinueWatching       ← cards with real "watched" progress bars
+    About                  ← The Pilot
+    Seasons / EpisodeCard  ← My Journey as seasons and episodes
+    Originals / ProjectCard← pinned horizontal sequence on desktop, swipe rail on touch
+    ProjectModal           ← full-screen project overlay with a shared-element transition
+    TopPicks               ← career highlights row
+    Skills                 ← skill genres; each card shows where the skill appears
+    Achievements           ← award-poster cards + certification rail (links to credentials)
+    ResumeViewer/ResumeModal ← designed resume sheet, PDF viewer, download
+    FinalCTA               ← TO BE CONTINUED… + contact links
+    CustomCursor, fx.tsx   ← cursor states, magnetic buttons, 3D tilt, text reveals, particles
+  hooks/                   ← Lenis smooth scroll + scroll lock, media queries, watch progress
+scripts/build-images.mjs   ← optional responsive portrait variants (sharp)
+```
 
-- No heavy JavaScript frameworks or dependencies
-- Animations use CSS and requestAnimationFrame for smooth 60fps performance
-- Respects `prefers-reduced-motion` for accessibility
-- Cursor effects disabled on mobile (touch devices)
+**Stack:** React 18, TypeScript, Vite 6, Tailwind CSS 4, Framer Motion 11, Lenis.
 
-## License
+## Accessibility and performance
 
-This portfolio template is provided as-is for personal use.
+- `prefers-reduced-motion` is respected: smooth scroll, the custom cursor, tilt, particles, grain and the pinned horizontal scroll turn off, and the opening jumps straight to its final frame.
+- Hover effects only run on devices with a precise pointer. Touch devices get tap interactions and native swipe rails.
+- The custom cursor appears only with a mouse or trackpad.
+- Overlays close with Esc, and the highlight reel supports Space and the ← → keys.
+- Portraits are responsive WebP files (25–90 KB). Overlays are code-split, and particles pause when they're off screen.
 
----
+## Keyboard shortcuts
 
-**Built by Darshan Jawalkar** — Software Engineer | Backend Developer | GenAI Enthusiast
+- **Opening:** Enter or Esc skips it.
+- **Play Intro:** Space pauses, ← and → change slides, Esc closes.
+- **Project and resume overlays:** Esc closes.
